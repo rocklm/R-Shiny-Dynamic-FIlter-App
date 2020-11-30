@@ -1,6 +1,6 @@
 #  raw = raw data
 # data() = raw data filtered by user selection
-# data = stores raw data filtered by cut only, used to filter donw color list by cut
+# data = stores raw data filtered by cut only, used to filter color list by cut
 # cutlist = list of cut types the user can select
 # filt1 = cut filter argument based on if statement
 # cutchoose = name of cut selection box for the ui (user input)
@@ -62,7 +62,7 @@ shinyServer(function(input, output) {
     #if all is selected, return everything else only return selected 
     if (input$cutchoose == "All") {
       
-      
+      #proxy for all -> no cut called @?><
       filt1 <- quote(cut != "@?><")
       
       
@@ -75,7 +75,7 @@ shinyServer(function(input, output) {
     #if all is selected, return everything else only return selected colors 
     if (input$colorchoose == "All") {
         
-      
+      #proxy for all -> no color called @?><
         filt2 <- quote(color != "@?><")
         
         
